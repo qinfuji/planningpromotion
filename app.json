@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/userticletlist/userTicketList",
+    "pages/ticketdetail/ticketdetail",
+    "pages/createticket/createticket"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#8e0038",
+    "navigationBarTitleText": "同城商铺中心",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#c41061",
+    "borderStyle": "black",
+    "backgroundColor": "#fafafa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/images/home.png",
+        "selectedIconPath": "assets/images/home_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/images/edit.png",
+        "selectedIconPath": "assets/images/edit-active.png",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/images/user.png",
+        "selectedIconPath": "assets/images/user_active.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

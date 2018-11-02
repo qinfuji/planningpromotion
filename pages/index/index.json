@@ -1,0 +1,17 @@
+{
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "同城商铺中心",
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "wux-tabs": "../../libs/wux/tabs/index",
+    "wux-tab": "../../libs/wux/tab/index",
+    "wux-badge": "../../libs/wux/badge/index",
+    "wux-icon": "../../libs/wux/icon/index",
+    "wux-tabbar": "../../libs/wux/tabbar/index",
+    "wux-tabbar-item": "../../libs/wux/tabbar-item/index",
+    "wux-row": "../../libs/wux/row/index",
+    "wux-col": "../../libs/wux/col/index",
+    "ticket":"../../components/ticket/index",
+    "wux-refresher": "../../libs/wux/refresher/index"
+  }
+}

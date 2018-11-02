@@ -1,0 +1,60 @@
+<!-- index.wxml -->
+<view class="index_body">
+  <view class="head_didider"></view>
+  <view class="categroy_tools">
+    <input placeholder="这个只有在按钮点击的时候才聚焦" />
+  </view>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode="aspectFill" style="width:100%" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class=" {{menuFixed ? 'fixed': ''}}" style="box-shadow:0px 0px 5px 0px rgba(0,0,0,0.30);z-index:99999" id="fix">
+    <wux-row>
+      <wux-col span="10">
+        <wux-tabs current="{{ current }}" bindchange="onChange" theme="material">
+          <wux-tab key="tab1" title="商品券"></wux-tab>
+          <wux-tab key="tab2" title="红包券"></wux-tab>
+          <wux-tab key="tab3" title="代金券"></wux-tab>
+          <wux-tab key="tab4" title="店 铺"></wux-tab>
+        </wux-tabs>
+      </wux-col>
+      <wux-col span="2">
+        <view class="categroy_btn">
+          <wux-icon wux-class="icon" type="ios-menu" size="28" />
+        </view>
+      </wux-col>
+    </wux-row>
+  </view>
+  <wux-refresher id="wux-refresher" pullingIcon="-" pullingText="" bind:pulling="onPulling" bind:refresh="onRefresh">
+    <view>
+      <block wx:for="{{ ticketList }}" wx:key="">
+        <ticket imageUrl="{{item.imageUrl}}" descr="{{item.descr}}" time="{{item.time}}" use_info="{{item.use_info}}" />
+      </block>
+    </view>
+  </wux-refresher>
+  <!-- <wux-tabbar default-current="1" position="bottom" theme="material">
+    <wux-tabbar-item title="首页">
+      <wux-badge count="1" slot="icon-on">
+        <wux-icon wux-class="icon" type="ios-home" size="22" />
+      </wux-badge>
+      <wux-badge count="1" slot="icon-off">
+        <wux-icon wux-class="icon" type="ios-home" size="22" />
+      </wux-badge>
+    </wux-tabbar-item>
+    <wux-tabbar-item title="发布">
+      <wux-badge dot slot="icon-on">
+        <wux-icon wux-class="icon" type="ios-home" size="22" />
+      </wux-badge>
+      <wux-badge dot slot="icon-off">
+        <wux-icon wux-class="icon" type="ios-home" size="22" />
+      </wux-badge>
+    </wux-tabbar-item>
+    <wux-tabbar-item title="我的">
+      <wux-icon wux-class="icon" type="ios-person" size="22" slot="icon-on" />
+      <wux-icon wux-class="icon" type="ios-person" size="22" slot="icon-off" />
+    </wux-tabbar-item>
+  </wux-tabbar> -->
+</view>
